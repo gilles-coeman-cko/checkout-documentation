@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Checkout.js Default</title>
+
+  <link href="style/default.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+
+<body>
+
+  <div class="sample-form">
+    <h1>Your store</h1>
+
+    <article>
+      <img src="images/sample-store/icon-shoe.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        
+      </div>
+    </article>
+
+    <article>
+      <img src="images/sample-store/icon-tshirt.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>        
+        <p></p>
+      </div>
+    </article>
+
+    <article>
+      <img src="images/sample-store/icon-tshirt.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </article>
+  </div>
+
+  <script src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+  <form class="payment-form" method="POST" action="https://merchant.com/successUrl">
+    <script>
+      Checkout.configure({
+        publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
+        paymentToken: "pay_tok_B943661D-4178-4B23-98F4-67C9BC861D62",
+        customerEmail: 'admin@example.com',
+        value: 10000,
+        currency: 'USD',
+        payButtonSelector: '#customButton'
+      });
+    </script>
+
+    <button id="customButton" >Your custom button</button>
+  </form>
+
+  <script>
+    $.get("get_payment_token.php", function(data, status){});
+  </script>
+</body>

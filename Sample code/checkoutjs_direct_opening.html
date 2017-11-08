@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Checkout.js Default</title>
+
+  <link href="style/default.css" rel="stylesheet">
+  <script>
+    function changePage(page) {
+      if (page == 1){
+        document.getElementById('review').classList.add('active');
+        document.getElementById('payment').classList.remove('active');
+        document.getElementById('iframeId').src = "checkoutjs_direct_opening1.html";
+      }
+      else {
+        document.getElementById('review').classList.remove('active');
+        document.getElementById('payment').classList.add('active');
+        document.getElementById('iframeId').src = "checkoutjs_direct_opening2.html";
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <header class="tab">
+    <button id="review" class="tablinks active" onclick="changePage(1)"> Review page</button>
+    <button id="payment" class="tablinks">Card payment page</button>    
+  </header>
+
+  <iframe id="iframeId" src="checkoutjs_direct_opening1.html">
+
+  <script>
+    var iframe = document.getElementById('iframeId');
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+  </script>
+
+</body>

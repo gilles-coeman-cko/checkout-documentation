@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Checkout.js Default</title>
+
+  <link href="style/default.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="sample-form">
+    <h1>Your store</h1>
+
+    <article>
+      <img src="images/sample-store/icon-shoe.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        
+      </div>
+    </article>
+
+    <article>
+      <img src="images/sample-store/icon-tshirt.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>        
+        <p></p>
+      </div>
+    </article>
+
+    <article>
+      <img src="images/sample-store/icon-tshirt.svg" alt="Sample shoe" />
+      <div>
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </article>
+  </div>
+
+  <form class="payment-form" method="POST" action="http://checkout.coeman.me?q=/uc_checkoutpayment/process_charge">
+    <script>
+      window.CKOConfig = {
+        publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
+        customerEmail: 'admin@example.com',
+        value: 10000,
+        currency: 'USD',
+        localisation: 'EN-GB',
+        appMode: 'lightbox',
+        renderMode: '0',
+        cardFormValidationChanged: function (event) {
+          submitButton.disabled = !Checkout.isCardFormValid()
+          if (Checkout.isCardFormValid()) submitButton.classList.remove('cko-disabled');
+          else submitButton.classList.add('cko-disabled');
+        }
+      };
+    </script>
+    <script async src="https://cdn.checkout.com/v2/sandbox/js/checkout.js"></script>
+  </form>
+</body>

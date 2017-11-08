@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Checkout.js Default</title>
+
+  <link href="style/default.css" rel="stylesheet">
+</head>
+
+<body id="secondPage">
+
+  <form class="payment-form" method="POST" action="http://checkout.coeman.me?q=/uc_checkoutpayment/process_charge">
+    <script src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
+    <form class="payment-form" method="POST" action="https://merchant.com/successUrl">
+      <script>
+        Checkout.configure({
+          publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
+          paymentToken: "pay_tok_B943661D-4178-4B23-98F4-67C9BC861D62",
+          customerEmail: 'admin@example.com',
+          value: 10000,
+          currency: 'USD',
+        });
+        Checkout.open();
+      </script>
+    </form>
+  </form>
+</body>

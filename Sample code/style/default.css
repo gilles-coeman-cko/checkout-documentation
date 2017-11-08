@@ -1,0 +1,145 @@
+body{
+  background:#5094da;
+  height: 584px;
+}
+
+.sample-form{
+  padding: 40px;
+}
+
+.sample-form h1{
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
+  margin-top: 0; 
+  margin-bottom: 1.5em; 
+}
+
+.sample-form article{
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+.sample-form img{
+  float: left;
+  width: 90px;
+  height: 90px;
+}
+
+.sample-form article div{
+  float: left;
+  display: block;
+  width: 70%;
+  margin-left: 20px;
+}
+
+.sample-form article div h2,
+.sample-form article div p{
+  display: block;
+  background: #3774b3;
+  height: .6em;
+  width: 60%;
+  margin-top: 10px; 
+  float: left;
+  margin-right: 10px; 
+  margin-bottom: 5px; 
+  border-radius: .4em;
+}
+
+.sample-form article div p{
+  margin-bottom: 5px; 
+  height: .5em;
+  width: 26%;
+}
+
+.sample-form article div > p:nth-child(2){
+  width: 20%;
+  clear: left;
+}
+
+.sample-form article div > p:nth-child(3){
+  width: 15%;
+}
+
+.sample-form article div > p:nth-child(4){
+  width: 32%;
+  clear: left;
+}
+
+.payment-form{
+  background: rgba(255,255, 255, 1); 
+  min-height: 80px;
+  text-align: center;
+}
+
+.payment-form #customButton{
+  margin: auto;
+  display: block;
+  width: 200px;
+  height: 40px;
+  position:relative;
+  top:20px;
+  
+  /* background: url(../images/background-rainbow.jpg);
+  background-size: cover;
+  background-position: center; 
+  color: #fff;
+  font-weight: bold; */
+}
+
+.payment-form .customLink{
+  line-height: 80px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#secondPage{
+  background: #e7eaf1;
+}
+
+#secondPage .payment-form{
+  min-height: 0;
+}
+
+header{
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+}
+
+header button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background-color: #ddd;
+}
+
+
+header button.active {
+  background-color: #ccc;
+}
+
+iframe{
+  height: 600px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 45px;
+
+  border: none;
+}
