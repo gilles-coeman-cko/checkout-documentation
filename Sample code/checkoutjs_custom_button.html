@@ -51,8 +51,9 @@
     <script>
       Checkout.configure({
         publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
-        paymentToken: "pay_tok_B943661D-4178-4B23-98F4-67C9BC861D62",
         customerEmail: 'admin@example.com',
+        cardFormMode: 'cardTokenisation',
+        paymentMode: 'cards',
         value: 10000,
         currency: 'USD',
         payButtonSelector: '#customButton'
@@ -61,8 +62,4 @@
 
     <button id="customButton" >Your custom button</button>
   </form>
-
-  <script>
-    $.get("get_payment_token.php", function(data, status){});
-  </script>
 </body>

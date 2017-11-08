@@ -124,7 +124,7 @@ header button {
   transition: 0.3s;
 }
 
-header button:hover {
+header button.hover:hover {
   background-color: #ddd;
 }
 
@@ -142,4 +142,22 @@ iframe{
   top: 45px;
 
   border: none;
+}
+
+.backgroundMessage {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 268px;
+}
+
+.backgroundMessage h1{
+
+  font-size: 24px;
+  color: #5094da
+}
+
+.backgroundMessage a{
+  
+  font-size: 16px;
+  color: #5094da
 }
