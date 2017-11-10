@@ -6,7 +6,6 @@
   <title>Checkout.js Default</title>
 
   <link href="style/default.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
 </head>
 
 <body>
@@ -46,20 +45,19 @@
     </article>
   </div>
 
-  <script src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
-  <form class="payment-form" method="POST" action="checkoutjs_success.html">
+  <form class="payment-form" method="POST" action="checkoutjs_3d_secure1.html">
     <script>
-      Checkout.configure({
+      window.CKOConfig = {
         publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
         customerEmail: 'admin@example.com',
         cardFormMode: 'cardTokenisation',
         paymentMode: 'cards',
         value: 10000,
         currency: 'USD',
-        payButtonSelector: '#customButton'
-      });
+        appMode: 'lightbox',
+        renderMode: '0',
+      };
     </script>
-
-    <button id="customButton" >Your custom button</button>
+    <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
   </form>
 </body>

@@ -45,23 +45,18 @@
     </article>
   </div>
 
-  <form class="payment-form" method="POST" action="http://checkout.coeman.me?q=/uc_checkoutpayment/process_charge">
+  <form class="payment-form" method="POST" action="checkoutjs_success.html">
     <script>
       window.CKOConfig = {
         publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
         customerEmail: 'admin@example.com',
+        cardFormMode: 'cardTokenisation',
+        paymentMode: 'cards',
         value: 10000,
         currency: 'USD',
-        localisation: 'EN-GB',
-        appMode: 'lightbox',
         renderMode: '0',
-        cardFormValidationChanged: function (event) {
-          submitButton.disabled = !Checkout.isCardFormValid()
-          if (Checkout.isCardFormValid()) submitButton.classList.remove('cko-disabled');
-          else submitButton.classList.add('cko-disabled');
-        }
       };
     </script>
-    <script async src="https://cdn.checkout.com/v2/sandbox/js/checkout.js"></script>
+    <script async src="https://cdn.checkout.com/sandbox/js/checkout.js"></script>
   </form>
 </body>
