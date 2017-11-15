@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Checkout.js Default</title>
+  <title>Checkout Frames Simple</title>
 
   <link href="style/default.css" rel="stylesheet">
 </head>
@@ -23,6 +23,8 @@
     Frames.init({
       publicKey: 'pk_test_a16a748e-a34e-4719-a10a-bcd0d0b497e0',
       containerSelector: '.frames-container',
+      theme: 'simple',
+      themeOverride: 'https://checkoutdev.coeman.me/docs/style/frames.css',
       cardValidationChanged: function() {
         payNowButton.disabled = !Frames.isCardValid();
       },

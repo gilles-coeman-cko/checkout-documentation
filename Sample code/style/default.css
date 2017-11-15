@@ -198,3 +198,7 @@ iframe{
 .center{
   text-align: center;
 }
+
+.frames-container {
+  padding: 8px;
+}
